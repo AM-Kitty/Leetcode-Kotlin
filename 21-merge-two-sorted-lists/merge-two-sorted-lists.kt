@@ -17,11 +17,12 @@ class Solution {
         var node2 = list2
 
         while(node1 != null || node2 != null){
-
+            // handle null cases first, so no need to check nullable
+            // in the following
             if (node1 == null){
                 cur.next = node2
                 break
-            }else if (node2 == null){
+            } else if (node2 == null){
                 cur.next = node1
                 break
             }
