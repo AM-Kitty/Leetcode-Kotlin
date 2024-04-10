@@ -8,8 +8,6 @@ class MyLinkedList() {
     private var cur: Node? = null
     private var head: Node? = null
     
-
-    private var i = 0
     private var size = 0
 
     fun get(index: Int): Int {
@@ -24,7 +22,7 @@ class MyLinkedList() {
             cur_idx ++
             cur = cur?.next
         }
-        // return cur?.value ?: -1
+        
         if (cur_idx == index){
             return cur?.value ?: -1
         } else {
@@ -34,7 +32,7 @@ class MyLinkedList() {
     //= getNode(index)?.value ?: -1
 
     private fun getNode(index: Int): Node? {
-        i=0
+        var i=0
         cur = head
         while(i++ < index && cur?.next != null) {
             cur = cur?.next
@@ -82,10 +80,7 @@ class MyLinkedList() {
             cur = cur?.next
         }
 
-        // getNode(index-1)?.let {
-        //     cur = it
-        //     it.next = Node(`val`, next = cur?.next)
-        // }
+       
         val temp = cur
         cur?.next = Node(`val`, next = temp?.next)
 
@@ -106,11 +101,5 @@ class MyLinkedList() {
             cur = cur?.next
         }
         cur?.next = cur?.next?.next
-
-
-
-        // getNode(index-1)?.let {
-        //     it.next = it.next?.next
-        // }
     }
 }
