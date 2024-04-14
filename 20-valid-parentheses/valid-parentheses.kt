@@ -1,5 +1,7 @@
 class Solution {
     fun isValid(s: String): Boolean {
+        // Keywords: Stack, Map
+
         val charMap = mapOf(
             ')' to '(',
             ']' to '[',
