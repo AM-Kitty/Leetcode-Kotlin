@@ -9,23 +9,17 @@
  * }
  */
 class Solution {
-    // Keywords: DFS
-    
-    var node: TreeNode? = null
+    // Keywords: DFS, recursion
 
     fun searchBST(root: TreeNode?, `val`: Int): TreeNode? {
-         dfs(root, `val`)
-         return node
-    }
-    fun dfs(root: TreeNode?, `val`: Int){
-        if(root != null){
-            if(root.`val` == `val`){
-                node = root
-                return
+        var cur = root
+        while (cur != null && cur.`val`!= `val`){
+            if (`val` < cur.`val`){
+                cur = cur.left
+            } else {
+                cur = cur.right
             }
-
-            dfs(root.left, `val`)
-            dfs(root.right, `val`)
         }
+        return cur
     }
 }
