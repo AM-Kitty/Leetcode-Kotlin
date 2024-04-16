@@ -11,8 +11,6 @@
 class Solution {
     // Keywords: Recursion, BST
 
-    var result: TreeNode? = null
-
     fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
         val insertNode = TreeNode(`val`)
         if (root == null) return insertNode
