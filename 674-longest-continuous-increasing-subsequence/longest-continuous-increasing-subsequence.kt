@@ -1,5 +1,7 @@
 class Solution {
     fun findLengthOfLCIS(nums: IntArray): Int {
+        // Keywords: Math
+
         if(nums.size == 0) return 0
         var res = 1
         var count = 1
