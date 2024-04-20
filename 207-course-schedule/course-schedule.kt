@@ -36,6 +36,8 @@ class Solution {
 
         // after check the course, the course is good to not to be checked again
         courseVisitedSet.remove(course)
+
+        // resolve time limit issue
         graph[course]!!.clear()
         return true
     }
