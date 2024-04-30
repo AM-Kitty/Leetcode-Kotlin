@@ -1,6 +1,6 @@
 class Solution {
     fun myPow(x: Double, n: Int): Double {
-        // Keywords: Math
+        // Keywords: Math, Overflow with Long Type
         // Complexity: O(N)
         if (n == 0) return 1.0
         val baseNum: Double = if(n<0) 1/x else x
